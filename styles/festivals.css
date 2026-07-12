@@ -1,0 +1,154 @@
+/* ===== FESTIVALS PAGE ===== */
+.festivals-hero {
+  background: var(--gradient-primary);
+  border-radius: var(--radius-lg);
+  padding: 48px 40px;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+.festivals-hero::after {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 240px;
+  height: 240px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.festival-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.festival-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all var(--transition);
+  position: relative;
+}
+.festival-card:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-4px);
+}
+
+.festival-card-accent {
+  height: 4px;
+  width: 100%;
+}
+
+.festival-card-body {
+  padding: 24px;
+}
+
+.festival-emoji {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.festival-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.festival-date-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+/* ===== COUNTDOWN TIMER ===== */
+.countdown-wrap {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  min-width: 52px;
+}
+.countdown-num {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--text-primary);
+}
+.countdown-label {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+.countdown-sep {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  margin-top: -8px;
+}
+
+.festival-past-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: rgba(90, 104, 128, 0.2);
+  border-radius: 50px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ===== FESTIVAL TYPES ===== */
+.festival-type-tab {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.type-tab-btn {
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.type-tab-btn.active,
+.type-tab-btn:hover {
+  background: var(--accent-purple);
+  border-color: var(--accent-purple);
+  color: white;
+}
+
+/* ===== ADD FESTIVAL FORM ===== */
+.add-festival-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 576px) {
+  .add-festival-form { grid-template-columns: 1fr; }
+  .countdown-wrap { flex-wrap: wrap; }
+}

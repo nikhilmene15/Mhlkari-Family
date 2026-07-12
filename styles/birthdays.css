@@ -1,0 +1,188 @@
+/* ===== BIRTHDAYS PAGE ===== */
+.birthday-hero-card {
+  background: var(--gradient-pink);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.birthday-hero-card::before {
+  content: '🎂';
+  position: absolute;
+  font-size: 8rem;
+  opacity: 0.1;
+  top: -10px;
+  right: 20px;
+}
+
+.bday-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.bday-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.bday-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-pink);
+}
+.bday-card:hover {
+  border-color: rgba(255, 59, 127, 0.4);
+  box-shadow: 0 8px 32px rgba(255, 59, 127, 0.15);
+  transform: translateY(-4px);
+}
+
+.bday-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 59, 127, 0.4);
+  margin-bottom: 16px;
+}
+.bday-avatar-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--gradient-pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.bday-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.bday-date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.bday-countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 16px;
+}
+.bday-days-num {
+  font-size: 2.5rem;
+  font-weight: 900;
+  background: var(--gradient-pink);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+.bday-days-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.bday-today-banner {
+  background: var(--gradient-pink);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.bday-send-wish-btn {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 59, 127, 0.12);
+  border: 1px solid rgba(255, 59, 127, 0.3);
+  border-radius: var(--radius-sm);
+  color: var(--accent-pink);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.bday-send-wish-btn:hover {
+  background: var(--gradient-pink);
+  border-color: transparent;
+  color: white;
+}
+
+/* ===== BIRTHDAY CALENDAR ===== */
+.bday-month-section {
+  margin-bottom: 40px;
+}
+.bday-month-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.bday-list-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  transition: all var(--transition);
+}
+.bday-list-item:hover {
+  border-color: var(--border-accent);
+  background: var(--bg-card-hover);
+}
+.bday-list-date {
+  width: 48px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.bday-list-day {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--accent-pink);
+  line-height: 1;
+}
+.bday-list-month-short {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

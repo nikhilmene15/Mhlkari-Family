@@ -1,0 +1,136 @@
+/* ===== PAYMENTS PAGE ===== */
+.payments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.payment-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all var(--transition);
+}
+.payment-card:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-4px);
+}
+
+.payment-card-header {
+  padding: 20px 20px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.payment-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.payment-amount {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--accent-amber);
+}
+
+/* ===== QR CODE AREA ===== */
+.qr-area {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+.qr-wrapper {
+  background: white;
+  padding: 16px;
+  border-radius: var(--radius);
+  display: inline-flex;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.payment-card-footer {
+  padding: 16px 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.payment-upi {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-family: 'Courier New', monospace;
+}
+.payment-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+.status-pending {
+  background: rgba(255, 184, 48, 0.15);
+  color: var(--accent-amber);
+  border: 1px solid rgba(255, 184, 48, 0.3);
+}
+.status-paid {
+  background: rgba(16, 212, 142, 0.15);
+  color: var(--accent-green);
+  border: 1px solid rgba(16, 212, 142, 0.3);
+}
+.status-partial {
+  background: rgba(0, 207, 255, 0.15);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(0, 207, 255, 0.3);
+}
+
+.payment-payers {
+  padding: 0 20px 16px;
+}
+.payment-payers-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.payers-list {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.payer-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: rgba(16, 212, 142, 0.1);
+  border: 1px solid rgba(16, 212, 142, 0.25);
+  border-radius: 50px;
+  font-size: 0.75rem;
+  color: var(--accent-green);
+}
+
+.mark-paid-btn {
+  width: 100%;
+  padding: 10px;
+  background: rgba(16, 212, 142, 0.12);
+  border: 1px solid rgba(16, 212, 142, 0.3);
+  border-radius: var(--radius-sm);
+  color: var(--accent-green);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  margin: 0 20px 20px;
+  width: calc(100% - 40px);
+}
+.mark-paid-btn:hover {
+  background: var(--accent-green);
+  color: white;
+  border-color: transparent;
+}

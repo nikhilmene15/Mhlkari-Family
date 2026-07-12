@@ -1,0 +1,311 @@
+/* Modern Table Styles */
+.modern-table-container {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Bar */
+.table-search {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--card-bg);
+}
+
+.search-input-wrapper {
+  position: relative;
+  max-width: 300px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 12px 8px 36px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  background: var(--input-bg);
+  color: var(--text-primary);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Table Wrapper */
+.table-wrapper {
+  overflow-x: auto;
+  background: var(--card-bg);
+}
+
+/* Modern Table */
+.modern-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.modern-table thead {
+  background: var(--bg-secondary);
+  border-bottom: 2px solid var(--border);
+}
+
+.modern-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.modern-table th.sortable {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.modern-table th.sortable:hover {
+  color: var(--accent-primary);
+}
+
+.th-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.sort-icon {
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.modern-table tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.2s ease;
+}
+
+.modern-table tbody tr:hover {
+  background: var(--bg-secondary);
+}
+
+.modern-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.modern-table td {
+  padding: 12px 16px;
+  color: var(--text-primary);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.table-cell {
+  vertical-align: middle;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 48px 20px;
+  color: var(--text-muted);
+}
+
+.empty-icon {
+  font-size: 40px;
+  margin-bottom: 12px;
+  opacity: 0.5;
+}
+
+.empty-state h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+}
+
+.empty-state p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Pagination */
+.table-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-top: 1px solid var(--border);
+  background: var(--card-bg);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pagination-info {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pagination-btn {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+  min-width: 40px;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: var(--bg-secondary);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: var(--bg-disabled);
+  color: var(--text-muted);
+}
+
+.pagination-btn.active {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: white;
+}
+
+.page-numbers {
+  display: flex;
+  gap: 4px;
+}
+
+.page-number {
+  min-width: 32px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modern-table-container {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .table-search {
+    padding: 12px 16px;
+  }
+  
+  .search-input-wrapper {
+    max-width: 100%;
+  }
+  
+  .modern-table th,
+  .modern-table td {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  
+  .table-pagination {
+    padding: 12px 16px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  
+  .pagination-controls {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .pagination-info {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .modern-table th,
+  .modern-table td {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+  
+  .pagination-btn {
+    padding: 4px 8px;
+    font-size: 12px;
+    min-width: 32px;
+  }
+  
+  .page-number {
+    min-width: 28px;
+  }
+}
+
+/* Dark Mode Specific Styles */
+@media (prefers-color-scheme: dark) {
+  .modern-table-container {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .search-input:focus {
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+  }
+}
+
+/* Custom CSS Variables for Dark Mode Support */
+:root {
+  --card-bg: #ffffff;
+  --input-bg: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-disabled: #e9ecef;
+  --border: #dee2e6;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --text-muted: #adb5bd;
+  --accent-primary: #10b981;
+}
+
+/* Dark Mode Variables */
+[data-theme="dark"] {
+  --card-bg: #1f2937;
+  --input-bg: #374151;
+  --bg-secondary: #374151;
+  --bg-disabled: #4b5563;
+  --border: #4b5563;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --text-muted: #9ca3af;
+  --accent-primary: #10b981;
+}
+
+/* Smooth transitions for theme switching */
+.modern-table-container,
+.modern-table,
+.search-input,
+.pagination-btn {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
